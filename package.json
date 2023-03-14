@@ -1,6 +1,6 @@
 {
   "name": "@jpj-common/module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "package for jpj be nodejs",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
