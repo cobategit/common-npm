@@ -22,7 +22,7 @@ export class AppError extends Error {
   serializeErrors() {
     return {
       statusCode: this.statusCode,
-      status: this.status,
+      success: this.status,
       message: this.message,
       response_code: this.code,
     }
