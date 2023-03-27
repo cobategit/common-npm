@@ -1,11 +1,11 @@
 export class AppError extends Error {
   statusCode: number
   code: string
-  success: boolean
+  status: boolean
 
   constructor(
     statusCode: number,
-    success: boolean,
+    status: boolean,
     message: string,
     code: string
   ) {
@@ -14,7 +14,7 @@ export class AppError extends Error {
     this.statusCode = statusCode
     this.message = message
     this.code = code
-    this.success = success
+    this.status = status
 
     Object.setPrototypeOf(this, AppError.prototype)
   }
@@ -22,7 +22,7 @@ export class AppError extends Error {
   serializeErrors() {
     return {
       statusCode: this.statusCode,
-      success: this.success,
+      status: this.status,
       message: this.message,
       response_code: this.code,
     }
