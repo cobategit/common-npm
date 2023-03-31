@@ -4,7 +4,7 @@ export const setPagination = (
   defaultSize: number
 ) => {
   const limit = size ? +size : defaultSize
-  const offset = page ? page * limit : 0
+  const offset = page ? (page - 1) * limit : 0
   return { limit, offset }
 }
 
